@@ -1,0 +1,2 @@
+# Newscat
+Hack aplikasi newscat
