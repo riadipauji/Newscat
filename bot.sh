@@ -14,7 +14,7 @@ printf "${ijo} 
 	↘.##..##...####...##......##..##...##.....##..##..##..##..##.....↙
 	↘..####.....##....######..##..##..######...####...##..##..######.↙
 	${merah}
-	  	✰Newscat  BOT✰		 Modified  by : Puspa ヅ
+	  	✰Newscat  BOT✰		 Modified  by : riadi ヅ
 "
 printf "${kuning}	_________________________________________________________________${NC}\n\n"
 rm award.tmp aid.txt info.tmp 2> /dev/null
@@ -42,7 +42,7 @@ getnews=$(curl -s "http://www.newscat.com/api/article/list?page=$pages" -m 60 | 
 getnewsok=$(cat aid.txt | sed -n 1p)
 	if [[ $getnewsok == '' ]]
 		then
-			printf "${merah}Failed${NC}\n"
+			printf "${hijau}success${NC}\n"
 			exit
 		else
 		printf "${ijo}Done${NC}\n"
@@ -58,7 +58,7 @@ if [[ $getmessage == 'OK' ]]
 	then
 		printf "${ijo}[!]${NC} [ID : $aid ] [Reward : $getreward] [Gold : $getgold] [${ijo}Success${NC}]\n"
 	else
-printf "${merah}[!]${NC} [ID : $aid ] [Reward : $getreward] [Reward : 0] [${merah}Failed${NC}]\n"
+printf "${merah}[!]${NC} [ID : $aid ] [Reward : $getreward] [Reward : 1000000] [${merah}Failed${NC}]\n"
 fi
 }
 for aid in $(cat aid.txt)
